@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+  background-image: url("../images/background.jpg");
+  font-family: "Roboto", sans-serif;
+}
+
+/* NAVIGATION BAR */
+
+.bg-custom {
+  background-color: none;
+}
+
+.navbar__input {
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.btn-warning,
+.btn-outline-warning {
+  border-radius: 20px;
+  font-size: 1.1em;
+}
+
+.navbar__selection,
+.navbar__selection option {
+  border-radius: 20px;
+  font-size: 1.1em;
+}
+
+.navbar__list{
+  color: white;
+}
+
+.welcome-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+  margin-top: 45px;
+}
+
+.l-con {
+  background: url("../images/main-computer.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.l-con button {
+  background: rgb(0, 0, 0, 0.4);
+}
+
+.l-con h2 {
+  color: white;
+  background-color: rgb(0, 0, 0, 0.4);
+  padding: 0.5em 0;
+}
+
+.r-con {
+  color: #ffd235;
+}
+
+.r-con__subtitle {
+  font-size: 32px;
+}
+
+.r-con__title {
+  font-size: 42px;
+}
+
+
+/* FOOTER */
+
+.footer{
+  margin-top: calc(100vh - 270px);
+  height: 135px;
+  background-color: #333333;
+}
