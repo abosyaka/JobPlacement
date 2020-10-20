@@ -1,14 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import "finder.css";
+
+html, body {
+  max-width: 100%;
+}
 
 body {
-  background-image: url("../images/background.jpg");
+  background: url(../images/background.jpg) no-repeat;
+  background-size: cover;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 /* NAVIGATION BAR */
 
 .bg-custom {
   background-color: none;
+}
+
+li {
+  list-style: none;
 }
 
 .navbar__input {

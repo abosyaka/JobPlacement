@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Applicant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Placement</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="../resources/css/style.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-custom row">
+        <a class="navbar-brand" href="#" style="color: white;">Navbar</a>
+
+        <form class="form-inline my-2 my-lg-0 col-lg-7">
+            <input class="form-control mr-sm-2 navbar__input col-lg-6 my-2" type="search" placeholder="I'm  searching" aria-label="Search">
+            <select name="nav-selection" class="form-control navbar__selection font-weight-bold mr-sm-2 my-sm-2" id="">
+                <option value="">Vacancies</option>
+                <option value="">Curriculum Vitae</option>
+                <option value="">Companies</option>
+            </select>
+            <button class="col-lg-auto btn btn-warning my-2 my-sm-0 font-weight-bold form-control" type="submit">Search</button>
+        </form>
+
+        <div class="languages col-auto ml-auto">
+            <select class="navbar__selection form-control font-weight-bold" name="language" id="">
+                <option value="eng">english</option>
+                <option value="rus">русский</option>
+                <option value="kaz">kazaq</option>
+            </select>
+        </div>
+
+        <div class="col-5">
+            <ul class="d-flex navbar__list">
+                <li>CV</li>
+                <li>Favourite</li>
+                <li>Help</li>
+                <li>Home</li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<main>
+    <div class="m-con d-flex flex-row pt-4">
+        <div class="l-m-con">
+            <div class="d-flex flex-column">
+                <h2>My Events</h2>
+                <ul>
+                    <li><img src="../resources/images/mail.png" alt=""> <p>Invitations</p></li>
+                    <li><img src="../resources/images/chat.png" alt=""> <p>Replies</p></li>
+                    <li><img src="../resources/images/eye-variant-with-enlarged-pupil.png" alt=""> <p>Views Resume</p></li>
+                    <li><img src="../resources/images/black-star-silhouette.png" alt=""> <p>Favourites</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="r-m-con">
+            <div class="container">
+                <h3 class="yellow mb-3">To get recommendations fill out the form</h3>
+                <form action="post" class="d-flex flex-column">
+                    <label class="yellow mb-5">
+                        Career objective:
+                        <input type="text" name="career">
+                    </label>
+                    <label class="yellow mb-5">
+                        Salary:
+                        <input type="number" name="salary">
+                    </label>
+                    <div class="d-flex flex-row">
+                        <label class="d-flex flex-row checkbox " style="border-right: dotted;">
+                            <span class="yellow">Employment:</span>
+                            <div class="d-flex flex-column ">
+                                <div>
+                                    <input type="checkbox" name="fulltime" id="fulltime" value="fulltime">
+                                    <label for="fulltime">Full Time</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="parttime" id="parttime" value="parttime">
+                                    <label for="parttime">Part Time</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="projecttime" id="projecttime" value="projecttime">
+                                    <label for="projecttime">Project Time</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="volunteering" id="volunteering" value="volunteering">
+                                    <label for="volunteering">Volunteering</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="internship" id="internship" value="internship">
+                                    <label for="internship">Internship</label>
+                                </div>
+
+                            </div>
+
+                        </label>
+                        <label class="d-flex flex-row checkbox">
+                            <span class="yellow">Schedule:</span>
+                            <div class="d-flex flex-column">
+                                <div>
+                                    <input type="checkbox" name="fullday" id="fullday" value="fullday">
+                                    <label for="fullday">Full Day</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="shiftwork" id="shiftwork" value="shiftwork">
+                                    <label for="shiftwork">Shift work</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="flexiblschedule" id="flexiblschedule" value="flexiblschedule">
+                                    <label for="flexiblschedule">Flexible schedule</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="remoteaccess" id="remoteaccess" value="remoteaccess">
+                                    <label for="remoteaccess">Remote access</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" name="rotationalaccess" id="rotationalaccess" value="rotationalaccess">
+                                    <label for="rotationalaccess">Rotational access</label>
+                                </div>
+
+                            </div>
+
+                        </label>
+                    </div>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+
+</footer>
+</body>
+</html>

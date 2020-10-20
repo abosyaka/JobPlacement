@@ -1,0 +1,75 @@
+.m-con {
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+}
+
+.l-m-con {
+    background-color: #333333;
+    padding: 2em 5em 5em;
+}
+
+.l-m-con h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.l-m-con ul {
+    padding: 0;
+}
+
+.l-m-con ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.l-m-con ul li img{
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+}
+
+.l-m-con ul li p {
+    margin: 0;
+}
+
+.r-m-con {
+    background-color: rgba(0, 0, 0, 0.45);
+    margin-right: 10em;
+    padding: 3em;
+    width: 86em;
+}
+
+.yellow {
+    color: #FFD235;
+}
+
+.r-m-con h3 {
+    text-align: center;
+}
+
+.r-m-con form > label{
+    justify-content: space-between;
+}
+
+.r-m-con form input[type=text], .r-m-con form input[type=number], .r-m-con form input[type=checkbox]  {
+    border-radius: 15em;
+}
+
+.r-m-con form .checkbox {
+    margin-right: 10em;
+    padding-right: 6em;
+}
+
+.r-m-con form .checkbox div{
+    padding-left: 1em;
+}
+
+.r-m-con form button {
+    width: max-content;
+
+}
