@@ -12,6 +12,33 @@ body {
   overflow: hidden;
 }
 
+li{
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #adadad;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffd235;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b19222;
+}
+
 /* NAVIGATION BAR */
 
 .bg-custom {
@@ -41,8 +68,9 @@ li {
   font-size: 1.1em;
 }
 
-.navbar__list{
+.navbar__list {
   color: white;
+  font-size: 1.4em;
 }
 
 .welcome-con {
@@ -55,16 +83,20 @@ li {
 .l-con {
   background: url("../images/main-computer.jpg") no-repeat center;
   background-size: cover;
+  min-height: fit-content;
+  min-width: fit-content;
 }
 
 .l-con button {
   background: rgb(0, 0, 0, 0.4);
+  font-size: 40px;
 }
 
 .l-con h2 {
   color: white;
   background-color: rgb(0, 0, 0, 0.4);
   padding: 0.5em 0;
+  font-size: 70px;
 }
 
 .r-con {
@@ -79,11 +111,19 @@ li {
   font-size: 42px;
 }
 
+.r-con__text {
+  font-size: 24px;
+}
 
 /* FOOTER */
 
-.footer{
-  margin-top: calc(100vh - 270px);
-  height: 135px;
+.footer {
   background-color: #333333;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.b-right {
+  border-right: 1px solid #FFFFFF;
+  padding-right: 0.5em;
 }
