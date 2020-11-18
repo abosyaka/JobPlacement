@@ -1,0 +1,14 @@
+.card{
+  background-color: rgb(0, 0, 0, .5);
+}
+
+.registration input,
+.registration select{
+  border-radius: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.registration h3{
+  color: #ffd235;
+}

@@ -1,0 +1,378 @@
+input:active{
+    border: none;
+}
+
+.m-con {
+    color: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+}
+
+.l-m-con {
+    background-color: #333333;
+    padding: 2em 5em 5em;
+}
+
+.l-m-con h2 {
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+
+.l-m-con ul {
+    padding: 0;
+}
+
+.l-m-con ul li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.l-m-con ul li img{
+    width: 30px;
+    height: 30px;
+    margin-right: 1em;
+}
+
+.l-m-con ul li p {
+    margin: 0;
+}
+
+.r-m-con {
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 3em;
+    width: 86em;
+}
+
+.yellow {
+    color: #FFD235;
+}
+
+.r-m-con h3 {
+    text-align: center;
+}
+
+.r-m-con form {
+    position: relative;
+}
+
+.r-m-con form > label{
+    justify-content: space-between;
+}
+
+.r-m-con form input[type=text], .r-m-con form input[type=number], .r-m-con form input[type=checkbox]  {
+    border-radius: 15em;
+}
+
+.r-m-con form .checkbox {
+    margin-right: 10em;
+    padding-right: 6em;
+}
+
+.r-m-con form .checkbox div{
+    padding-left: 1em;
+}
+
+.r-m-con form button {
+    width: max-content;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+    .r-m-con form button {
+        right: -36px;
+        bottom: -30px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .r-m-con form button {
+        bottom: -103px;
+    }
+}
+
+.pb-7 {
+    padding-bottom: 7em;
+}
+
+.l-m-con ul li i {
+    margin-right: 11px;
+}
+
+.profile-l-sub-con {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+}
+
+.profile-l-sub-con p {
+    margin: 0;
+}
+
+.photo {
+    width: 132px;
+    height: 132px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.personPhoto {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border: 3px solid;
+}
+
+.profile-l-sub-con-info div {
+    border: 1px solid #000000;
+}
+
+.border-rad {
+    border-radius: 1em;
+}
+
+.profile-heading h2 {
+    font-size: 36px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.profile-heading p {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.profile-contact {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.profile-border-contact {
+    align-items: start;
+    justify-content: center;
+    margin: 1em 0;
+}
+
+.profile-border-contact p {
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.profile-l-sub-con i {
+    margin-right: 11px;
+}
+
+.profile-r-sub-con-up {
+    justify-content: space-between;
+}
+
+.r-sub-separator div {
+    border: 1px solid #FFFFFF;
+}
+
+.r-sub-separator ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.r-sub-separator ul li:before {
+    content: "\2022";
+    color: #FFFFFF;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+.profile-r-sub-con i {
+    margin-right: 11px;
+}
+
+.profile-r-sub-con-down > div {
+    border: 1px solid #FFFFFF;
+}
+
+.b-dotted-right {
+    border-right: 1px dotted #FFFFFF;
+}
+
+.card{
+  background-color: rgb(0, 0, 0, .5);
+}
+
+.registration input,
+.registration select{
+  border-radius: 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.registration h3{
+  color: #ffd235;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import "finder.css";
+@import "finderProfile.css";
+
+* {
+  font-family: Roboto, sans-serif;
+}
+
+html, body {
+  max-width: 100%;
+}
+
+body {
+  background: url(../images/background.jpg) no-repeat;
+  background-size: cover;
+  font-family: "Roboto", sans-serif;
+}
+
+li{
+  list-style: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #adadad;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffd235;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b19222;
+}
+
+/* NAVIGATION BAR */
+
+.bg-custom {
+  background-color: none;
+}
+
+li {
+  list-style: none;
+}
+
+.navbar__input {
+  border: none;
+  border-radius: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.btn-warning,
+.btn-outline-warning {
+  border-radius: 20px;
+  font-size: 1.1em;
+}
+
+.navbar__selection,
+.navbar__selection option {
+  border-radius: 20px;
+  font-size: 1.1em;
+}
+
+.navbar__list {
+  color: white;
+  font-size: 1.4em;
+}
+
+.welcome-con {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1em;
+  margin-top: 45px;
+}
+
+.l-con {
+  background: url("../images/main-computer.jpg") no-repeat center;
+  background-size: cover;
+  min-height: fit-content;
+  min-width: fit-content;
+}
+
+.l-con button {
+  background: rgb(0, 0, 0, 0.4);
+  font-size: 40px;
+}
+
+.l-con h2 {
+  color: white;
+  background-color: rgb(0, 0, 0, 0.4);
+  padding: 0.5em 0;
+  font-size: 70px;
+}
+
+.r-con {
+  color: #ffd235;
+}
+
+.r-con__subtitle {
+  font-size: 32px;
+}
+
+.r-con__title {
+  font-size: 42px;
+}
+
+.r-con__text {
+  font-size: 24px;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: #333333;
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.b-right {
+  border-right: 1px solid #FFFFFF;
+  padding-right: 0.5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -->
+
+
