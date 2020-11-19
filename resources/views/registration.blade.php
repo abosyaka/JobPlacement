@@ -38,7 +38,8 @@
                 <div class="collapse multi-collapse" id="multiCollapseExample1">
                     <div class="card card-body d-flex overflow-auto">
                         <h3 class="font-weight-bold text-center">Apply as Employee</h3>
-                        <form action="{{route('employee_reg')}}" class="col-12 col-lg-5 col-md-8 align-self-center" method="post">
+                        <form action="{{route('employee_reg')}}" class="col-12 col-lg-5 col-md-8 align-self-center"
+                              method="post">
                             @csrf
                             <input
                                 type="text"
@@ -94,43 +95,49 @@
                 <div class="collapse multi-collapse" id="multiCollapseExample2">
                     <div class="card card-body">
                         <h3 class="font-weight-bold text-center">Apply as Hirer</h3>
-                        <form class="col-12 col-lg-5 col-md-8 align-self-center" method="post">
+                        <form action="{{route('hirer_reg')}}" class="col-12 col-lg-5 col-md-8 align-self-center"
+                              method="post">
                             @csrf
-                            <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Company name*"
-                            />
-                            <input
-                                type="text"
-                                class="form-control mt-3"
-                                placeholder="URL-address"
-                            />
-                            <select class="form-control mt-3">
-                                <option selected value="">Almaty</option>
-                                <option value="">Astana</option>
-                                <option value="">Karagandy</option>
+                            <select class="form-control mt-3" name="company">
+                                @foreach($companies as $company)
+                                    <option value="{{$company->id}}">{{$company->name}}</option>
+                                @endforeach
                             </select>
                             <h3 class="font-weight-bold text-center mt-4">Contact</h3>
                             <input
                                 type="text"
                                 class="form-control mt-3"
                                 placeholder="First name*"
+                                name="name"
+                                required
                             />
                             <input
                                 type="text"
                                 class="form-control mt-3"
                                 placeholder="Second name*"
+                                name="surname"
+                                required
                             />
                             <input
                                 type="email"
                                 class="form-control mt-3"
                                 placeholder="Email*"
+                                name="email"
+                                required
                             />
                             <input
                                 type="tel"
                                 class="form-control mt-3"
                                 placeholder="Phone number*"
+                                name="phone"
+                                required
+                            />
+                            <input
+                                type="password"
+                                class="form-control mt-3"
+                                placeholder="Password"
+                                name="password"
+                                required
                             />
                             <button
                                 type="submit"

@@ -9,4 +9,8 @@ class ProfileController extends Controller
     {
         return view('finderProfile');
     }
+
+    public function showHirer(){
+        return view('hirerProfile');
+    }
 }

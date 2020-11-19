@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Company;
 use App\Models\Employee;
+use App\Models\Recruiter;
 use App\Models\Specialization;
 use Illuminate\Http\Request;
 
@@ -11,9 +13,11 @@ class RegistrationController extends Controller
     public function show()
     {
         $spec = Specialization::all();
+        $companies = Company::all();
 
         return view('/registration', [
-            'specializations' => $spec
+            'specializations' => $spec,
+            'companies' => $companies
         ]);
     }
 
@@ -33,6 +37,15 @@ class RegistrationController extends Controller
 
     public function registerHirer(Request $request)
     {
-        //TODO
+        $recruiter = new Recruiter();
+        $recruiter->name = $request->input('name');
+        $recruiter->surname = $request->input('surname');
+        $recruiter->phone_num = $request->input('phone');
+        $recruiter->email = $request->input('email');
+        $recruiter->password = bcrypt($request->input('password'));
+        $recruiter->company_id = $request->input('company', 1);
+
+        $recruiter->save();
+        return redirect('/login');
     }
 }

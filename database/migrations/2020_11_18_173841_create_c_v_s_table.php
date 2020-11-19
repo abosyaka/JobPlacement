@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSpecializationsTable extends Migration
+class CreateCVSTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreateSpecializationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('specializations', function (Blueprint $table) {
+        Schema::create('c_v_s', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->text('skills');
+            $table->string('education');
+            $table->string('position');
+            $table->string('experience');
+            $table->string('languages');
+            $table->text('description');
             $table->timestamps();
         });
     }
@@ -27,6 +32,6 @@ class CreateSpecializationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('specializations');
+        Schema::dropIfExists('c_v_s');
     }
 }

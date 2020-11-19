@@ -17,6 +17,8 @@ class LogInController extends Controller
 
         if (Auth::guard('employee')->attempt(['email' => $request['email'], 'password' => $request['password']])) {
             return redirect('/employeeProfile');
+        } elseif (Auth::guard('recruiter')->attempt(['email' => $request['email'], 'password' => $request['password']])) {
+            return redirect('/recruiterProfile');
         }
 
         return back();
@@ -24,7 +26,12 @@ class LogInController extends Controller
 
     public function logout()
     {
-        Auth::guard('employee')->logout();
+        if(Auth::guard('employee')->check()) {
+            Auth::guard('employee')->logout();
+        }
+        elseif (Auth::guard('recruiter')->check()){
+            Auth::guard('recruiter')->logout();
+        }
         return redirect('/');
     }
 }

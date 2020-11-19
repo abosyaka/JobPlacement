@@ -5,11 +5,12 @@ namespace App\Models;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class Employee extends Authenticatable
+
+class Recruiter extends Authenticatable
 {
     use Notifiable;
 
-    protected $guard = 'recruiter';
+    protected $guard = 'employee';
 
     protected $fillable = [
         'name',
@@ -17,11 +18,11 @@ class Employee extends Authenticatable
         'phone_num',
         'email',
         'password',
-        'avatar',
-        'specialization_id'
+        'company_id'
     ];
 
-    public function specialization(){
-        return $this->belongsTo(Specialization::class);
+    public function company(){
+        return $this->belongsTo(Company::class);
     }
+
 }

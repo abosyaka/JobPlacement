@@ -32,8 +32,13 @@ Route::get('/admin', function (){
 
 Route::get('/employeeProfile', 'ProfileController@showEmployee');
 
+Route::get('/recruiterProfile', 'ProfileController@showHirer');
+
 Route::get('/editProfile', 'ProfileEditController@showEdit');
 
 Route::post('/editProfile/edit', 'ProfileEditController@edit')->name('edit');
 
-Route::post('/registration/submit', 'RegistrationController@registerEmployee')->name('employee_reg');
+Route::post('/registration/submitEmployee', 'RegistrationController@registerEmployee')->name('employee_reg');
+
+Route::post('/registration/submitHirer', 'RegistrationController@registerHirer')->name('hirer_reg');
+
