@@ -44,6 +44,7 @@
                                 <p><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>{{$user->phone_num}}</p>
                             </div>
                             <a href="/editProfile" type="button" class="btn btn-warning">Edit Profile</a>
+                            <a href="/addVacancy" class="btn btn-warning">Add Vacancy</a>
                         </div>
 
                     </div>
@@ -53,7 +54,7 @@
                                 <h4 class="text-center mt-4 mt-lg-0"><i class="fa fa-book fa-lg" aria-hidden="true"></i>Company
                                 </h4>
                                 <div class="border-rad pl-4 pr-3 pt-2 pb-2">
-                                    <h3>{{$user->company->name}}</h3>
+                                    <h3><a href="/company/{{$user->company->id}}/vacancies">{{$user->company->name}}</a></h3>
                                     <p>{{$user->company->business_field}}</p>
                                 </div>
                             </div>

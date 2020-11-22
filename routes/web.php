@@ -44,3 +44,8 @@ Route::post('/registration/submitEmployee', 'RegistrationController@registerEmpl
 
 Route::post('/registration/submitHirer', 'RegistrationController@registerHirer')->name('hirer_reg');
 
+Route::get('/addVacancy', 'VacancyController@showAdd');
+
+Route::post('/addVacancy/submit', 'VacancyController@addVacancy')->name('vacancy_add');
+
+Route::get('/company/{id}/vacancies', 'VacancyController@showCompanyVacancies');
