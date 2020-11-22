@@ -21,7 +21,12 @@ class Employee extends Authenticatable
         'specialization_id'
     ];
 
-    public function specialization(){
+    public function specialization()
+    {
         return $this->belongsTo(Specialization::class);
+    }
+
+    public function cv(){
+        return $this->hasOne(CV::class);
     }
 }

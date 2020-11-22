@@ -13,6 +13,9 @@ class ProfileEditController extends Controller
         if (Auth::guard('employee')->check()) {
             $user = Auth::guard('employee')->user();
         }
+        elseif (Auth::guard('recruiter')->check()){
+            $user = Auth::guard('recruiter')->user();
+        }
 
         return view('editProfile',[
             'user' => $user,
@@ -33,5 +36,19 @@ class ProfileEditController extends Controller
         $user->save();
 
         return redirect('/employeeProfile');
+    }
+
+    public function editRecruiter(Request $request){
+        $user = Auth::guard('recruiter')->user();
+        $user->name = $request->input('r_name');
+        $user->phone_num = $request->input('tel');
+
+        if(isset($request['r_password']) && !empty($request['r_password'])){
+            $user->password = bcrypt($request->input('r_password'));
+        }
+
+        $user->save();
+
+        return redirect('/recruiterProfile');
     }
 }

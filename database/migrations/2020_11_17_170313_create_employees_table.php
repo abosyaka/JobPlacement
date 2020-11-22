@@ -22,6 +22,7 @@ class CreateEmployeesTable extends Migration
             $table->string('password');
             $table->string('avatar')->default('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png');
             $table->unsignedInteger('specialization_id');
+            $table->unsignedInteger('cv_id');
             $table->timestamps();
         });
     }

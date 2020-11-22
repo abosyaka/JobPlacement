@@ -1,7 +1,7 @@
 <header>
-<?php
+    <?php
     use Illuminate\Support\Facades\Auth;
-?>
+    ?>
     <nav
         class="navbar navbar-expand-lg navbar-light bg-custom d-flex flex-column"
     >
@@ -33,16 +33,20 @@
                 </button>
             </form>
 
-            @if(\Illuminate\Support\Facades\Auth::guard('employee')->check())
+            @if(\Illuminate\Support\Facades\Auth::guard('employee')->check()
+                                || \Illuminate\Support\Facades\Auth::guard('recruiter')->check())
                 <?php
-                $user = Auth::guard('employee')->user();
+                if (Auth::guard('employee')->check())
+                    $user = Auth::guard('employee')->user();
+                elseif (Auth::guard('recruiter')->check())
+                    $user = Auth::guard('recruiter')->user();
                 ?>
                 <div class="col-auto ml-auto align-self-center d-flex">
                     <form action="{{route('logout')}}" method="post">
                         @csrf
                         <button type="submit" class="btn btn-outline-warning">Log out</button>
                     </form>
-                    <a type="button" href="/employeeProfile" class="btn btn-outline-warning ml-2">{{$user->name}}</a>
+                    <a type="button" href="{{$user instanceof \App\Models\Employee ? '/employeeProfile' : '/recruiterProfile'}}" class="btn btn-outline-warning ml-2">{{$user->name}}</a>
                 </div>
             @else
                 <div class="btn-group col-auto ml-auto align-self-center" style="height: 50%;">

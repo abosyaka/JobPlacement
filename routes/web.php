@@ -38,6 +38,8 @@ Route::get('/editProfile', 'ProfileEditController@showEdit');
 
 Route::post('/editProfile/edit', 'ProfileEditController@edit')->name('edit');
 
+Route::post('/editProfile/editRecruiter', 'ProfileEditController@editRecruiter')->name('edit_rec');
+
 Route::post('/registration/submitEmployee', 'RegistrationController@registerEmployee')->name('employee_reg');
 
 Route::post('/registration/submitHirer', 'RegistrationController@registerHirer')->name('hirer_reg');

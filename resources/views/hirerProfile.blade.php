@@ -50,66 +50,19 @@
                     <div class="profile-r-sub-con col-xl-8 pl-lg-5">
                         <div class="profile-r-sub-con-up d-flex flex-lg-row flex-column">
                             <div class="r-sub-separator">
-                                <h4 class="text-center mt-4 mt-lg-0"><i class="fa fa-book fa-lg" aria-hidden="true"></i>Education
+                                <h4 class="text-center mt-4 mt-lg-0"><i class="fa fa-book fa-lg" aria-hidden="true"></i>Company
                                 </h4>
                                 <div class="border-rad pl-4 pr-3 pt-2 pb-2">
-                                    <p>Educational institution: IITU</p>
-                                    <p>Specialization: CSSE</p>
-                                    <p>Year of ending: 2022</p>
-                                </div>
-                            </div>
-                            <div class="r-sub-separator">
-                                <h4 class="text-center mt-4 mt-lg-0"><i class="fa fa-user-circle-o fa-lg"
-                                                                        aria-hidden="true"></i>Skills</h4>
-                                <div class="border-rad pl-5 pr-3 pt-2 pb-2">
-                                    <ul>
-                                        <li>HTML</li>
-                                        <li>CSS</li>
-                                        <li>Photoshop</li>
-                                        <li>Illustrator</li>
-                                        <li>Java</li>
-                                        <li>JavaScript</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="r-sub-separator">
-                                <h4 class="text-center mt-4 mt-lg-0"><i class="fa fa-language fa-lg"
-                                                                        aria-hidden="true"></i>Languages
-                                </h4>
-                                <div class="border-rad pl-5 pr-3 pt-2 pb-2">
-                                    <ul>
-                                        <li>Russian - A1</li>
-                                        <li>Kazakh - A1</li>
-                                        <li>English - B2</li>
-                                    </ul>
+                                    <h3>{{$user->company->name}}</h3>
+                                    <p>{{$user->company->business_field}}</p>
                                 </div>
                             </div>
                         </div>
                         <div class="profile-r-sub-con-down pt-5">
                             <h4 class="text-center mt-4 mt-lg-0"><i class="fa fa-user-secret fa-lg"
-                                                                    aria-hidden="true"></i>About
-                                me / Why me?</h4>
+                                                                    aria-hidden="true"></i>About company</h4>
                             <div class="border-rad d-flex flex-lg-row flex-column pt-5 pb-4 pl-4 pr-4">
-                                <div class="b-dotted-right pr-5">
-                                    <p>
-                                        When I feel bad, I start to be silent. To me
-                                        easier, to lock the pain in yourself. Without causing
-                                        harm to another. Don't give a damn that she's slow
-                                        eats me from the inside. One of my downsides is
-                                        I forgive people what is not forgiven, and
-                                        I take offense at the most ordinary little things.
-                                    </p>
-                                </div>
-                                <div class="pl-3">
-                                    <p>
-                                        When I feel bad, I start to be silent. To me
-                                        easier, to lock the pain in yourself. Without causing
-                                        harm to another. Don't give a damn that she's slow
-                                        eats me from the inside. One of my downsides is
-                                        I forgive people what is not forgiven, and
-                                        I take offense at the most ordinary little things.
-                                    </p>
-                                </div>
+                                <p>{{$user->company->description}}</p>
                             </div>
                         </div>
                     </div>
