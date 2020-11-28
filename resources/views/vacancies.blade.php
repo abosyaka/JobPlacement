@@ -13,7 +13,7 @@
                 <hr class="my-4">
                 <p>Salary: {{$vacancy->salary}} KZT</p>
                 <p class="lead">
-                    <a class="btn btn-warning btn-lg" href="#" role="button">Learn more</a>
+                    <a class="btn btn-warning btn-lg" href="{{ url('/vacancyDetails', [$vacancy->id]) }}">Learn more</a>
                 </p>
             </div>
         @endforeach

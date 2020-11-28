@@ -1,6 +1,7 @@
 <header>
     <?php
     use Illuminate\Support\Facades\Auth;
+
     ?>
     <nav
         class="navbar navbar-expand-lg navbar-light bg-custom d-flex flex-column"

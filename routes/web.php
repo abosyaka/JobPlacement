@@ -49,3 +49,9 @@ Route::get('/addVacancy', 'VacancyController@showAdd');
 Route::post('/addVacancy/submit', 'VacancyController@addVacancy')->name('vacancy_add');
 
 Route::get('/company/{id}/vacancies', 'VacancyController@showCompanyVacancies');
+
+Route::get('/vacancyDetails/{id}', 'VacancyController@vacancyDetails');
+
+Route::get('/vacancyEdit/{id}', 'VacancyController@showEdit');
+
+Route::post('/vacancyEdit/edit', 'VacancyController@edit')->name('vacancy_edit');
