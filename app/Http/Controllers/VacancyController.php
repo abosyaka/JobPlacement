@@ -23,7 +23,6 @@ class VacancyController extends Controller
 
     public function vacancyDetails($id){
         $vacancy = DB::table('vacancies')->find($id);
-
         if (Auth::guard("employee")->check()) {
             $user = Auth::guard("employee")->user();
         } elseif (Auth::guard("recruiter")->check()) {

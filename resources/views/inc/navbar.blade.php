@@ -11,12 +11,15 @@
             ><img src="{{asset('images/logo.png')}}"
                 /></a>
 
-            <form class="form-inline my-2 my-lg-0 col-lg-7">
+            <form action="{{route('autocomplete.search_all')}}" class="form-inline my-2 my-lg-0 col-lg-7" method="get" autocomplete="on">
+                @csrf
                 <input
                     class="form-control mr-sm-2 navbar__input col-lg-6 my-2"
                     type="search"
                     placeholder="I'm  searching"
                     aria-label="Search"
+                    id ="search"
+                    name="search"
                 />
                 <select
                     name="nav-selection"
@@ -73,3 +76,5 @@
     </nav>
 
 </header>
+
+

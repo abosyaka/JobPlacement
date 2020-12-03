@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'AutoCompleteController@index');
 
+Route::post('autocomplete', 'AutoCompleteController@search')->name('autocomplete.search');
+
+Route::get('/search','AutoCompleteController@searchAll')->name('autocomplete.search_all');
 
 Route::get('/registration', 'RegistrationController@show');
 
