@@ -30,6 +30,7 @@ class RegistrationController extends Controller
         $employee->email = $request->input('email');
         $employee->password = bcrypt($request->input('password'));
         $employee->specialization_id = $request->input('specialization', 1);
+        $employee->cv_id = 1;
 
         $employee->save();
         return redirect('/login');

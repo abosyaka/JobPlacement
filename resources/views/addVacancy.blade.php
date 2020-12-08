@@ -44,6 +44,11 @@
                                     <label for="salary" class="font-weight-bold" style="font-size: 1.3em;">Salary</label>
                                     <input type="text" class="form-control ml-2 col" name="salary" id="salary">
                                 </div>
+                                <select name="specialization" id="" class="form-control mt-3">
+                                    @foreach($specializations as $spec)
+                                        <option value="{{$spec->id}}">{{$spec->name}}</option>
+                                    @endforeach
+                                </select>
 
                                 <div class="form-inline">
                                     <button type="submit" class="btn btn-outline-warning col" style="position: static">

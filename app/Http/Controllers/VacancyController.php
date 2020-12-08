@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Specialization;
 use App\Models\Vacancy;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +11,10 @@ use Illuminate\Support\Facades\DB;
 class VacancyController extends Controller
 {
     public function showAdd(){
-        return view('addVacancy');
+        $spec = Specialization::all();
+        return view('addVacancy',[
+            'specializations' => $spec
+        ]);
     }
 
     public function showCompanyVacancies($id){
@@ -79,6 +83,7 @@ class VacancyController extends Controller
         $vacancy->exp = $request->input('exp');
         $vacancy->salary = $request->input('salary');
         $vacancy->company_id = $company->id;
+        $vacancy->specialization_id = $request->input('specialization', 1);
 
         $vacancy->save();
 

@@ -68,9 +68,15 @@
                 <a href="/registration" class="mr-5">
                     <li>CV</li>
                 </a>
-                <a href="/" class="">
+                <a href="/" class="mr-5">
                     <li>Home</li>
                 </a>
+
+                @if(\Illuminate\Support\Facades\Auth::guard("employee")->check())
+                <a href="{{ url('/suggestions')}}">
+                    <li>Recomendations</li>
+                </a>
+                @endif
             </ul>
         </div>
     </nav>
