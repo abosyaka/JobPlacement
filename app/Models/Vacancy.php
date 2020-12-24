@@ -10,4 +10,8 @@ class Vacancy extends Model
     {
         return $this->belongsTo(Company::class);
     }
+
+    public function specialization() {
+        return $this->belongsTo(Specialization::class);
+    }
 }

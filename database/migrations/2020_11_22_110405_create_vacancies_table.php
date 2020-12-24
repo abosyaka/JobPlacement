@@ -20,6 +20,7 @@ class CreateVacanciesTable extends Migration
             $table->string('title');
             $table->string('position');
             $table->string('description');
+            $table->unsignedInteger('specialization_id');
             $table->string('exp');
             $table->unsignedInteger('salary');
         });
